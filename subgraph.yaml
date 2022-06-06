@@ -1,0 +1,46 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - name: marketplace
+    kind: ethereum/contract
+    network: bsc
+    source:
+      abi: marketplace
+      address: "0xEC3D6146C454AB3262050D526513318d69c6e517"
+      startBlock: 18403508
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/mappings/marketplace.ts
+      entities:
+        - Sale
+      abis:
+        - name: marketplace
+          file: ./abis/marketplace.json
+      eventHandlers:
+        - event: "Sell(address,uint256,uint256)"
+          handler: handleSell
+  - name: NFT1155
+    kind: ethereum/contract
+    network: bsc
+    source:
+      abi: NFT1155
+      address: "0x36e823aDb470996573d0fea4F78787Ced2251bA5"
+      startBlock: 18403507
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/mappings/token.ts
+      entities:
+        - Token
+      abis:
+        - name: NFT1155
+          file: ./abis/NFT1155.json
+      eventHandlers:
+        - event: "newNFT(address,uint256,uint256)"
+          handler: handleToken
+        
+        

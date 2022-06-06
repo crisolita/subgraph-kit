@@ -1,0 +1,15 @@
+type Token @entity {
+  id: ID!
+  uri: String!
+  creator: Bytes!
+  amount: BigInt!
+}
+
+type Sale @entity {
+  id: ID!
+  seller: Bytes!
+  amount: BigInt!
+  price: BigInt!
+  txHash: String!
+  tokenID: BigInt!
+}

@@ -1,0 +1,21 @@
+{
+  "name": "subgraph-starter-kit",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen --output-dir src/types/",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ --access-token fd33b2b3080e4d329167b52d02803035 crisolita/nftandmarketmainnet"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.20.0",
+    "@graphprotocol/graph-ts": "^0.20.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
+  }
+}
