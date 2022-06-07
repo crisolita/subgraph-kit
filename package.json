@@ -4,7 +4,7 @@
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ --access-token fd33b2b3080e4d329167b52d02803035 crisolita/nftandmarketmainnet"
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ --access-token fd33b2b3080e4d329167b52d02803035 crisolita/testnetpues"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.20.0",

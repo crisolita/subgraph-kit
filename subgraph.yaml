@@ -4,11 +4,11 @@ schema:
 dataSources:
   - name: marketplace
     kind: ethereum/contract
-    network: bsc
+    network: chapel
     source:
       abi: marketplace
-      address: "0xEC3D6146C454AB3262050D526513318d69c6e517"
-      startBlock: 18403508
+      address: "0x683a6d3dCBCCb572e45999EDF71D1D5f41D8430A"
+      startBlock: 19878390
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -24,11 +24,11 @@ dataSources:
           handler: handleSell
   - name: NFT1155
     kind: ethereum/contract
-    network: bsc
+    network: chapel
     source:
       abi: NFT1155
-      address: "0x36e823aDb470996573d0fea4F78787Ced2251bA5"
-      startBlock: 18403507
+      address: "0x93bcFE6ffa4CF7A40692E9c4153c2262C6Cf7BE1"
+      startBlock: 19878389
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

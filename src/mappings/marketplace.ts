@@ -15,14 +15,12 @@ export function handleSell(event: SellEvent): void {
 
   let details = contract.orders(orderId);
 
-  if (contract.orders(orderId).value5) {
-    let _sale = new Sale(orderId.toString());
+  let _sale = new Sale(orderId.toString());
 
-    _sale.tokenID = tokenId;
-    _sale.seller = seller;
-    _sale.amount = details.value3;
-    _sale.price = details.value4;
-    _sale.txHash = txHash;
-    _sale.save();
-  }
+  _sale.tokenID = tokenId;
+  _sale.seller = seller;
+  _sale.amount = details.value3;
+  _sale.price = details.value4;
+  _sale.txHash = txHash;
+  _sale.save();
 }
